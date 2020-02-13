@@ -1,11 +1,13 @@
 package org.apromore.service.csvimporter;
 
-import java.util.List;
-import java.util.Map;
+import org.zkoss.zul.Button;
 import org.zkoss.zul.Div;
 import org.zkoss.zul.Button;
 import org.zkoss.zul.Listbox;
 import org.zkoss.zul.Window;
+
+import java.util.List;
+import java.util.Map;
 
 /**
  * A sample of a CSV log.
@@ -49,7 +51,7 @@ public interface LogSample {
 
     void setFormatBtns(Button[] formatBtns);
 
-
+    List<Integer> getCaseAttributesPos();
     // Public methods
 
     /**
@@ -59,7 +61,7 @@ public interface LogSample {
      */
     List<String> automaticFormat();
 
-    void openPopUp();
+    void openPopUp(boolean show);
     void setIgnoreAll(Window window);
     void setOtherAll(Window window);
     void setOtherTimestamps();

@@ -239,6 +239,7 @@ public class CSVImporterPortal implements FileImporterPlugin {
                     int y = me.getPageY();
                     w.setLeft((x - 180) + "px");
                     w.setTop((y + 120) + "px");
+                    Clients.evalJavaScript("adjustPos(" + fi + ")");
                 });
                 formatBtns[i] = formatBtn;
                 newColumn.appendChild(formatBtn);
@@ -258,7 +259,7 @@ public class CSVImporterPortal implements FileImporterPlugin {
             }
 
             createPopUpTextBox(sample.getHeader().size(), popUPBox, helpP, sample.getLines().get(0), sample, formatBtns);
-            sample.openPopUp();
+            sample.openPopUp(false);
 
             Integer timeStampPos = sample.getHeads().get("timestamp");
             if (timeStampPos != -1) {
@@ -346,6 +347,7 @@ public class CSVImporterPortal implements FileImporterPlugin {
             textbox.setWidth("98%");
             textbox.setPlaceholder("dd-MM-yyyy HH:mm:ss");
             textbox.setPopup(helpP);
+            textbox.setClientAttribute("spellcheck", "false");
             textbox.setPopupAttributes(helpP, "after_start","","","toggle");
 
             textbox.addEventListener("onChanging", (InputEvent event) -> {

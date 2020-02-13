@@ -86,32 +86,15 @@
         <module>Apromore-OSGI-Bundles/prom6-osgi</module>
 
         <!-- OSGI -->
-        <module>Apromore-OSGI-Bundles/eclipse-collections-osgi</module>
-        <module>Apromore-OSGI-Bundles/antlr4-runtime-osgi</module>
         <module>Apromore-OSGI-Bundles/bpmntk-osgi</module>
         <module>Apromore-OSGI-Bundles/bpstruct-osgi</module>
-        <module>Apromore-OSGI-Bundles/ltl-conf-check-osgi</module>
-        <module>Apromore-OSGI-Bundles/apm-verification-osgi</module>
+        <module>Apromore-OSGI-Bundles/eclipse-collections-osgi</module>
         <module>Apromore-OSGI-Bundles/ini4j-osgi</module>
         <module>Apromore-OSGI-Bundles/json-osgi</module>
-        <module>Apromore-OSGI-Bundles/jbpt-petri-osgi</module>
-        <!--<module>Apromore-OSGI-Bundles/pnapi-bpdiff-osgi</module>-->
-        <module>Apromore-OSGI-Bundles/postgresql-osgi</module>
-        <!--<module>Apromore-OSGI-Bundles/uma-bpdiff-osgi</module>-->
-        <module>Apromore-OSGI-Bundles/prom-pnml-osgi</module>
-        <module>Apromore-OSGI-Bundles/pn-automata-conv-osgi</module>
-        <module>Apromore-OSGI-Bundles/ltl-to-automaton-osgi</module>
-        <module>Apromore-OSGI-Bundles/declare-visualizer-osgi</module>
         <module>Apromore-OSGI-Bundles/raffaeleconforti-osgi</module>
-        <module>Apromore-OSGI-Bundles/eventstr-confchecking-osgi</module>
-        <module>Apromore-OSGI-Bundles/ehcache-virgo</module>
-
-
-        <!-- ZK Osgi -->
-        <module>Apromore-OSGI-Bundles/zk-osgi</module>
-
-        <!-- Similarity Search -->
         <module>Apromore-OSGI-Bundles/similaritysearch-osgi</module>
+        <module>Apromore-OSGI-Bundles/zk-osgi</module>
+        <module>Apromore-OSGI-Bundles/ehcache-virgo</module>
 
         <!-- Plugins -->
         <module>Apromore-Plugins</module>
@@ -123,18 +106,9 @@
         <module>Apromore-Custom-Plugins/Log-Filter-Portal-Plugin-Generic</module>
 
         <module>Apromore-Custom-Plugins/Account-Portal-Plugin</module>
-        <module>Apromore-Custom-Plugins/Apromore-Editor/bpmn20xmlbasic</module>
-        <module>Apromore-Custom-Plugins/Apromore-Editor/diagram core</module>
-        <module>Apromore-Custom-Plugins/Apromore-Editor/pdf</module>
+        <module>Apromore-Custom-Plugins/Apromore-Editor</module>
         <module>Apromore-Custom-Plugins/BIMP-Annotation-Logic</module>
-        <module>Apromore-Custom-Plugins/BIMP-Editor-Plugin</module>
-        <module>Apromore-Custom-Plugins/BIMP-Editor-Plugin2</module>
-        <module>Apromore-Custom-Plugins/BIMP-Portal-Plugin</module>
         <module>Apromore-Custom-Plugins/BPMNDiagramImporter-Logic</module>
-<!--
-        <module>Apromore-Custom-Plugins/BPMNMiner-Logic</module>
-        <module>Apromore-Custom-Plugins/BPMNMiner-Portal-Plugin</module>
--->
         <module>Apromore-Custom-Plugins/CSVImporter-Logic</module>
         <module>Apromore-Custom-Plugins/CSVImporter-Portal</module>
         <module>Apromore-Custom-Plugins/CSVExporter-Logic</module>
