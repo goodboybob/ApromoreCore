@@ -49,15 +49,12 @@
                 <configuration>
                     <unpackBundle>false</unpackBundle> <!-- This is important so that embedded JAR's don't show up twice -->
                     <instructions>
-                        <Import-Bundle>
-                            org.apromore.raffaeleconforti-osgi;bundle-version="[1.0,2.0]"
-                        </Import-Bundle>
                         <Import-Package>
                             org.springframework.beans.factory.aspectj,
-                            org.processmining.contexts.*;version="[1.0,2.0)",
-                            org.processmining.framework.*;version="[1.0,2.0)",
-                            org.processmining.models.*;version="[1.0,2.0)",
-                            org.processmining.plugins.*;version="[1.0,2.0)",
+                            org.processmining.contexts.*,
+                            org.processmining.framework.*,
+                            org.processmining.models.*,
+                            org.processmining.plugins.*,
                             *
                         </Import-Package>
                         <Export-Package>
@@ -76,20 +73,9 @@
         </dependency>
         <dependency>
             <groupId>org.apromore</groupId>
-            <artifactId>raffaeleconforti-osgi</artifactId>
+            <artifactId>prom6-osgi</artifactId>
+            <version>6.0</version>
         </dependency>
-        <!--
-        <dependency>
-            <groupId>org.apromore</groupId>
-            <artifactId>bpmnminer-osgi</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>com.ibm.icu</groupId>
-                    <artifactId>icu4j</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>

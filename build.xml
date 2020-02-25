@@ -39,7 +39,7 @@
 
         <include name="Apromore-Custom-Plugins/Account-Portal-Plugin/target/account-portal-plugin-1.0.jar"/>
 
-        <include name="Apromore-Custom-Plugins/BPMNDiagramImporter-Logic/target/bpmndiagramimporter-logic-1.1.jar"/>
+        <!-- <include name="Apromore-Custom-Plugins/BPMNDiagramImporter-Logic/target/bpmndiagramimporter-logic-1.1.jar"/> -->
 
         <include name="Apromore-Custom-Plugins/CSVImporter-Logic/target/csvimporter-logic-1.0.jar"/>
         <include name="Apromore-Custom-Plugins/CSVImporter-Portal/target/csvimporter-portal-1.0.jar"/>
@@ -90,7 +90,7 @@
                 <include name="**/target/jbpt-petri-osgi-0.2.433.jar"/>
                 <include name="**/target/prom6-osgi-6.0.jar"/>
                 <include name="**/target/declare-visualizer-osgi-1.1.jar"/>
-                <include name="**/target/raffaeleconforti-osgi-1.1.jar"/>
+                <!-- <include name="**/target/raffaeleconforti-osgi-1.1.jar"/> -->
                 <include name="**/target/lpsolve-osgi-1.1.jar"/>
             </fileset>
 

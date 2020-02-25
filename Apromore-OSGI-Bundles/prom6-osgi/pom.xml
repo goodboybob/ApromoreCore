@@ -156,6 +156,7 @@
                             com.fluxicon.slickerbox.ui,
                             com.fluxicon.slickerbox.util,
                             com.jgraph.layout,
+                            com.jgraph.layout.hierarchical,
                             java_cup.runtime,
                             org.apache.commons.lang3.time,
                             org.deckfour.slickerbox.components,

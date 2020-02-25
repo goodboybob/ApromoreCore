@@ -78,12 +78,10 @@
         <module>Apromore-OSGI-Bundles/prom6-osgi</module>
 
         <!-- OSGI -->
-        <module>Apromore-OSGI-Bundles/bpmntk-osgi</module>
         <module>Apromore-OSGI-Bundles/bpstruct-osgi</module>
         <module>Apromore-OSGI-Bundles/eclipse-collections-osgi</module>
         <module>Apromore-OSGI-Bundles/ini4j-osgi</module>
         <module>Apromore-OSGI-Bundles/json-osgi</module>
-        <module>Apromore-OSGI-Bundles/raffaeleconforti-osgi</module>
         <module>Apromore-OSGI-Bundles/similaritysearch-osgi</module>
         <module>Apromore-OSGI-Bundles/zk-osgi</module>
 
@@ -338,12 +336,6 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.raffaeleconforti</groupId>
-                <artifactId>assembly</artifactId>
-                <version>1.0.20200211</version>
-            </dependency>
-
-            <dependency>
                 <groupId>com.thoughtworks.xstream</groupId>
                 <artifactId>xstream</artifactId>
                 <version>1.4.8</version>
@@ -385,11 +377,6 @@
             </dependency>
             <dependency>
                 <groupId>org.apromore</groupId>
-                <artifactId>bpmntk-osgi</artifactId>
-                <version>2.1</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apromore</groupId>
                 <artifactId>log-osgi</artifactId>
                 <version>1.1</version>
             </dependency>
@@ -404,22 +391,6 @@
                     </exclusion>
                 </exclusions>
             </dependency>
-            <dependency>
-                <groupId>org.apromore</groupId>
-                <artifactId>raffaeleconforti-osgi</artifactId>
-                <version>1.1.1</version>
-            </dependency>
-            <!--<dependency>-->
-                <!--<groupId>org.apromore</groupId>-->
-                <!--<artifactId>bpmnminer-osgi</artifactId>-->
-                <!--<version>1.1</version>-->
-            <!--</dependency>-->
-            <dependency>
-                <groupId>org.apromore</groupId>
-                <artifactId>prodrift-osgi</artifactId>
-                <version>2.5</version>
-            </dependency>
-
 
             <!-- Editor -->
             <dependency>
