@@ -1,0 +1,138 @@
+<!--
+  ~ Copyright © 2009-2018 The Apromore Initiative.
+  ~
+  ~ This file is part of "Apromore".
+  ~
+  ~ "Apromore" is free software; you can redistribute it and/or modify
+  ~ it under the terms of the GNU Lesser General Public License as
+  ~ published by the Free Software Foundation; either version 3 of the
+  ~ License, or (at your option) any later version.
+  ~
+  ~ "Apromore" is distributed in the hope that it will be useful, but
+  ~ WITHOUT ANY WARRANTY; without even the implied warranty
+  ~ of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+  ~ See the GNU Lesser General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU Lesser General Public
+  ~ License along with this program.
+  ~ If not, see <http://www.gnu.org/licenses/lgpl-3.0.html>.
+  -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.apromore</groupId>
+        <artifactId>apromore</artifactId>
+        <version>1.1</version>
+        <relativePath>../../</relativePath>
+    </parent>
+
+    <groupId>org.apromore</groupId>
+    <artifactId>process-discoverer-libs</artifactId>
+    <version>1.0</version>
+    <packaging>bundle</packaging>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <configuration>
+                    <instructions>
+                        <Embed-Dependency>artifactId=bpstruct|hub-pn|jbpt|jgraph|uma</Embed-Dependency>
+                        <Embed-Directory>OSGI-INF/lib</Embed-Directory>
+                        <Export-Package>
+                            au.edu.qut.bpmn.structuring,
+                            au.edu.qut.bpmn.structuring.core,
+                            au.edu.qut.bpmn.structuring.graph,
+                            au.edu.qut.bpmn.metrics,
+                            au.edu.qut.bpmn.exporter,
+                            au.edu.qut.bpmn.exporter.impl,
+                            au.edu.qut.processmining.log,
+                            au.edu.qut.processmining.log.graph,
+                            au.edu.qut.processmining.miners.splitminer,
+                            au.edu.qut.processmining.miners.splitminer.dfgp,
+                            au.edu.qut.processmining.miners.splitminer.ui.dfgp,
+                            au.edu.qut.processmining.miners.splitminer.ui.miner,
+                            au.edu.unimelb.processmining.optimization
+                        </Export-Package>
+                        <Import-Package>
+                            !com.touchgraph.graphlayout.*,
+                            !de.bpt.hpi.graph,
+                            !junit.*,
+                            !net.stixar.*,
+                            !org.antlr.runtime,
+                            !org.junit,
+                            *
+                        </Import-Package>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apromore</groupId>
+            <artifactId>log-osgi</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apromore</groupId>
+            <artifactId>prom6-osgi</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apromore</groupId>
+            <artifactId>bpstruct</artifactId>
+            <version>0.1.117</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/bpstruct-0.1.117.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apromore</groupId>
+            <artifactId>hub-pn</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/hub-pn-1.0.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apromore</groupId>
+            <artifactId>jbpt</artifactId>
+            <version>0.2.77</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/de-jbpt-0.2.77.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apromore</groupId>
+            <artifactId>jgraph</artifactId>
+            <version>1.6</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/jgraph-1.6.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apromore</groupId>
+            <artifactId>uma</artifactId>
+            <version>1.2.4</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/uma-1.2.4.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json-osgi</artifactId>
+            <version>20090211</version>
+        </dependency>
+    </dependencies>
+
+</project>
