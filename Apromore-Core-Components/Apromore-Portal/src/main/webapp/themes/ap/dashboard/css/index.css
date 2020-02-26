@@ -38,7 +38,7 @@ body {
     background-color: transparent !important;
 }
 
-.ap-dashboard .ap-slide-menu {
+.ap-dashboard .ap-main-menu .ap-slide-menu {
     border: none;
     padding: 3px 0 0 10px;
     height: var(--ap-menu-height);
@@ -117,7 +117,7 @@ body {
     background-color: transparent !important;
 }
 
-.ap-slide-menu-c .slider {
+.ap-slide-menu .slider {
     display: none;
 }
 
@@ -132,15 +132,6 @@ body {
     width: 0px;
 }
 
-/*.ap-radio-c input[type="radio"]:checked ~ .z-radio-content,*/
-/*.ap-radio-c input[type="radio"]:checked ~ .z-radio-content .ap-icon-binocular {*/
-/*    color:#09E;*/
-/*}*/
-
-.mySouth-collapsed i {
-    display: none;
-}
-
 .ap-dashboard .ap-slide-menu .bar {
     border-radius: 0;
 }
@@ -152,6 +143,16 @@ body {
 .ap-dashboard .ap-slide-menu .ap-radio-c > span {
     display: inline-block;
 }
+
+/*.ap-radio-c input[type="radio"]:checked ~ .z-radio-content,*/
+/*.ap-radio-c input[type="radio"]:checked ~ .z-radio-content .ap-icon-binocular {*/
+/*    color:#09E;*/
+/*}*/
+
+.mySouth-collapsed i {
+    display: none;
+}
+
 
 .ap-dashboard i.ap-icon {
     display: inline-block;
