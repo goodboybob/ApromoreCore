@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Modify maxBytesLocalHeap/maxElementsInMemory according to available resource on the server-->
 <ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd">
+         xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd"
+         maxEntriesLocalHeap="100">
 
     <!-- Disk cache path -->
     <diskStore path="java.io.tmpdir/ehcache"/>
@@ -8,7 +10,7 @@
     <!--Since XES Log file could be huge, the default limit of 1,000 object references could be reached while
     attempting to calculate the size of the object graph and severe performance degradation could occur. So manually
      control how deep the SizeOf engine can go when sizing on-heap elements. -->
-    <!--<sizeOfPolicy maxDepth="100" maxDepthExceededBehavior="abort"/>-->
+    <sizeOfPolicy maxDepth="100" maxDepthExceededBehavior="abort"/>
 
     <!--Predefined caches.  Add your cache configuration settings here.
         If you do not have a configuration for your cache a WARNING will be issued when the
@@ -28,22 +30,22 @@
                             has reached the maxInMemory limit.
 
         -->
-    <defaultCache
-            maxEntriesLocalHeap="10000"
-            timeToIdleSeconds="120"
-            timeToLiveSeconds="120"
-            maxEntriesLocalDisk="10000000"
-            diskExpiryThreadIntervalSeconds="120"
-            memoryStoreEvictionPolicy="LRU"/>
+    <!--<defaultCache-->
+            <!--maxEntriesLocalHeap="10000"-->
+            <!--timeToIdleSeconds="120"-->
+            <!--timeToLiveSeconds="120"-->
+            <!--maxEntriesLocalDisk="10000000"-->
+            <!--diskExpiryThreadIntervalSeconds="120"-->
+            <!--memoryStoreEvictionPolicy="LRU"/>-->
 
     <!-- Testing Cache -->
-    <cache name="test"
-           maxEntriesLocalHeap="0"
-           timeToIdleSeconds="120"
-           timeToLiveSeconds="120"
-           maxEntriesLocalDisk="10000000"
-           diskExpiryThreadIntervalSeconds="120"
-           memoryStoreEvictionPolicy="LRU"/>
+    <!--<cache name="test"-->
+           <!--maxEntriesLocalHeap="0"-->
+           <!--timeToIdleSeconds="120"-->
+           <!--timeToLiveSeconds="120"-->
+           <!--maxEntriesLocalDisk="10000000"-->
+           <!--diskExpiryThreadIntervalSeconds="120"-->
+           <!--memoryStoreEvictionPolicy="LRU"/>-->
 
     <!-- XES LOG Cache
 
