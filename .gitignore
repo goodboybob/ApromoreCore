@@ -3,6 +3,13 @@
 **/*.iws
 *.iml
 
+# Eclipse IDEA artifacts
+**/*.prefs
+**/*.project
+**/*.gitignore
+**/*.classpath
+**/dependency-reduced-pom.xml
+
 # macOS Finder artifacts
 **/.DS_Store
 
