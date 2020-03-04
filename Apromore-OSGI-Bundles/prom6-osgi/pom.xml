@@ -32,7 +32,7 @@
 
     <groupId>org.apromore</groupId>
     <artifactId>prom6-osgi</artifactId>
-    <version>6.0</version>
+    <version>1.0</version>
     <packaging>bundle</packaging>
 
     <repositories>
@@ -160,10 +160,7 @@
                             com.fluxicon.slickerbox.factory,
                             com.fluxicon.slickerbox.ui,
                             com.fluxicon.slickerbox.util,
-                            com.jgraph.layout,
-                            com.jgraph.layout.hierarchical,
-                            java_cup.runtime,
-                            org.apache.commons.lang3.time,
+                            
                             org.deckfour.slickerbox.components,
                             org.deckfour.slickerbox.components.glasspane,
                             org.deckfour.uitopia.api.event,
@@ -181,11 +178,15 @@
                             org.deckfour.uitopia.ui.util,
                             org.deckfour.uitopia.ui.views,
                             org.deckfour.uitopia.ui.workspace,
+                            
                             org.jfree.chart,
                             org.jfree.chart.annotations,
                             org.jfree.chart.plot,
                             org.jfree.data.xy,
                             org.jfree.ui,
+                            
+                            com.jgraph.layout,
+                            com.jgraph.layout.hierarchical,                            
                             org.jgraph,
                             org.jgraph.event,
                             org.jgraph.graph,
@@ -210,6 +211,7 @@
                             org.jgrapht.graph,
                             org.jgrapht.traverse,
                             org.jgrapht.util,
+                            
                             org.processmining,
                             org.processmining.analysis,
                             org.processmining.basicutils.models,
@@ -340,6 +342,7 @@
                             org.processmining.models.connections.petrinets.behavioral,
                             org.processmining.models.connections.petrinets.structural,
                             org.processmining.models.connections.transitionsystem,
+                            
                             org.processmining.models.graphbased,
                             org.processmining.models.graphbased.directed,
                             org.processmining.models.graphbased.directed.analysis,
@@ -371,6 +374,7 @@
                             org.processmining.models.graphbased.directed.utils,
                             org.processmining.models.graphbased.directedhypergraph,
                             org.processmining.models.graphbased.undirected,
+                            
                             org.processmining.models.jgraph,
                             org.processmining.models.jgraph.elements,
                             org.processmining.models.jgraph.factory,
@@ -378,6 +382,7 @@
                             org.processmining.models.jgraph.renderers,
                             org.processmining.models.jgraph.views,
                             org.processmining.models.jgraph.visualization,
+                            
                             org.processmining.models.mapping,
                             org.processmining.models.operationalsupport,
                             org.processmining.models.operationalsupport.gui,
@@ -393,9 +398,11 @@
                             org.processmining.models.semantics.petrinet.providers,
                             org.processmining.models.shapes,
                             org.processmining.models.util,
+                            
                             org.processmining.plugins,
                             org.processmining.plugins.astar.petrinet,
                             org.processmining.plugins.astar.petrinet.impl,
+                            
                             org.processmining.plugins.bpmn,
                             org.processmining.plugins.bpmn.converter,
                             org.processmining.plugins.bpmn.diagram,
@@ -411,18 +418,22 @@
                             org.processmining.plugins.bpmn.miner.util,
                             org.processmining.plugins.bpmn.parameters,
                             org.processmining.plugins.bpmn.plugins,
+                            
                             org.processmining.plugins.connectionfactories.logpetrinet,
                             org.processmining.plugins.filtering,
                             org.processmining.plugins.flowerMiner,
+                            
                             org.processmining.plugins.fuzzymap.util,
                             org.processmining.plugins.fuzzymodel.miner,
                             org.processmining.plugins.fuzzymodel.miner.ui,
+                            
                             org.processmining.plugins.ilpminer,
                             org.processmining.plugins.ilpminer.fitness,
                             org.processmining.plugins.ilpminer.netproperties,
                             org.processmining.plugins.ilpminer.templates,
                             org.processmining.plugins.ilpminer.templates.cplex,
                             org.processmining.plugins.ilpminer.templates.javailp,
+                            
                             org.processmining.plugins.InductiveMiner,
                             org.processmining.plugins.InductiveMiner.conversion,
                             org.processmining.plugins.InductiveMiner.dfgOnly,
@@ -457,6 +468,7 @@
                             org.processmining.plugins.InductiveMiner.mining.postprocessor,
                             org.processmining.plugins.InductiveMiner.plugins,
                             org.processmining.plugins.InductiveMiner.plugins.dialogs,
+                            
                             org.processmining.plugins.log,
                             org.processmining.plugins.log.exporting,
                             org.processmining.plugins.log.logabstraction,
@@ -466,9 +478,11 @@
                             org.processmining.plugins.log.logfilters.ui,
                             org.processmining.plugins.log.reverse,
                             org.processmining.plugins.loginsertstart,
+                            
                             org.processmining.plugins.operationalsupport,
                             org.processmining.plugins.operationalsupport.providers,
                             org.processmining.plugins.operationalsupport.providers.timetsannotation,
+                            
                             org.processmining.plugins.petrinet,
                             org.processmining.plugins.petrinet.configurable,
                             org.processmining.plugins.petrinet.configurable.ui,
@@ -490,6 +504,7 @@
                             org.processmining.plugins.petrinet.replayer.util.codec,
                             org.processmining.plugins.petrinet.replayer.util.statespaces,
                             org.processmining.plugins.petrinet.replayresult,
+                            
                             org.processmining.plugins.pnml,
                             org.processmining.plugins.pnml.exporting,
                             org.processmining.plugins.pnml.extensions,
@@ -499,11 +514,13 @@
                             org.processmining.plugins.pnml.graphics.utils,
                             org.processmining.plugins.pnml.importing,
                             org.processmining.plugins.pnml.toolspecific,
+                            
                             org.processmining.plugins.psd.model,
                             org.processmining.plugins.psd.model.pattern,
                             org.processmining.plugins.psd.model.sequence,
                             org.processmining.plugins.psd.ui,
                             org.processmining.plugins.psd.utils,
+                            
                             org.processmining.plugins.replayer.replayresult,
                             org.processmining.plugins.transitionsystem,
                             org.processmining.plugins.transitionsystem.converter,
@@ -524,9 +541,11 @@
                             org.processmining.plugins.tsml.graphics.utils,
                             org.processmining.plugins.tsml.importing,
                             org.processmining.plugins.tsml.toolspecific,
+                            
                             org.processmining.plugins.utils,
                             org.processmining.plugins.utils.sequencedistance,
                             org.processmining.utils,
+                            
                             org.processmining.plugins.kutoolbox.eventlisteners,
                             org.processmining.plugins.kutoolbox.exceptions,
                             org.processmining.plugins.kutoolbox.groupedlog,
@@ -538,6 +557,11 @@
                             org.processmining.plugins.kutoolbox.utils,
                             org.processmining.plugins.kutoolbox.visualizators,
                             org.processmining.plugins.nikefsmonitor,
+                            
+                            java_cup.runtime,
+                            
+                            nl.tue.astar.*,
+                            nl.tue.storage.*
                         </Export-Package>
                     </instructions>
                 </configuration>

@@ -202,40 +202,6 @@
             <version>1.1.0</version>
         </dependency>
 
-        <!-- BPMNMiner -->
-        <!--
-        <dependency>
-            <groupId>org.apromore</groupId>
-            <artifactId>prom6-osgi</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>com.ibm.icu</groupId>
-                    <artifactId>icu4j</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>org.apromore</groupId>
-            <artifactId>log-osgi</artifactId>
-            <version>1.0</version>
-        </dependency>
-        -->
-
-        <!-- ProDrift -->
-        <!--
-        <dependency>
-            <groupId>org.apromore</groupId>
-            <artifactId>prodrift-osgi</artifactId>
-        </dependency>
-        -->
-
-        <!-- Client -->
-<!--
-        <dependency>
-            <groupId>org.apromore</groupId>
-            <artifactId>filestore-client</artifactId>
-        </dependency>
--->
         <dependency>
             <groupId>org.apromore</groupId>
             <artifactId>manager-ws-model</artifactId>
