@@ -23,11 +23,12 @@ package au.edu.qut.bpmn.structuring;
 import au.edu.qut.bpmn.structuring.core.StructuringCore;
 import au.edu.qut.bpmn.helper.DiagramHandler;
 import au.edu.qut.bpmn.structuring.wrapper.BPStructWrapper;
-import org.processmining.models.graphbased.directed.bpmn.BPMNDiagram;
-import org.processmining.models.graphbased.directed.bpmn.BPMNEdge;
-import org.processmining.models.graphbased.directed.bpmn.BPMNNode;
-import org.processmining.models.graphbased.directed.bpmn.elements.*;
-import org.processmining.plugins.bpmn.BpmnAssociation;
+
+import org.apromore.processmining.models.graphbased.directed.bpmn.BPMNDiagram;
+import org.apromore.processmining.models.graphbased.directed.bpmn.BPMNEdge;
+import org.apromore.processmining.models.graphbased.directed.bpmn.BPMNNode;
+import org.apromore.processmining.models.graphbased.directed.bpmn.elements.*;
+import org.apromore.processmining.plugins.bpmn.BpmnAssociation;
 
 import java.util.*;
 

@@ -25,13 +25,13 @@ import de.hpi.bpt.process.serialize.JSON2Process;
 import de.hpi.bpt.process.serialize.Process2JSON;
 import ee.ut.bpstruct.Restructurer;
 
+import org.apromore.processmining.models.graphbased.directed.bpmn.BPMNDiagram;
+import org.apromore.processmining.models.graphbased.directed.bpmn.BPMNDiagramImpl;
+import org.apromore.processmining.models.graphbased.directed.bpmn.BPMNNode;
+import org.apromore.processmining.models.graphbased.directed.bpmn.elements.*;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.processmining.models.graphbased.directed.bpmn.BPMNDiagram;
-import org.processmining.models.graphbased.directed.bpmn.BPMNDiagramImpl;
-import org.processmining.models.graphbased.directed.bpmn.BPMNNode;
-import org.processmining.models.graphbased.directed.bpmn.elements.*;
 
 import java.util.*;
 

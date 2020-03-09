@@ -22,13 +22,14 @@ package au.edu.qut.bpmn.helper;
 
 import au.edu.qut.processmining.miners.splitminer.dfgp.DFGEdge;
 import ee.ut.comptech.*;
+
+import org.apromore.processmining.models.graphbased.directed.bpmn.BPMNDiagram;
+import org.apromore.processmining.models.graphbased.directed.bpmn.BPMNDiagramImpl;
+import org.apromore.processmining.models.graphbased.directed.bpmn.BPMNEdge;
+import org.apromore.processmining.models.graphbased.directed.bpmn.BPMNNode;
+import org.apromore.processmining.models.graphbased.directed.bpmn.elements.Flow;
+import org.apromore.processmining.models.graphbased.directed.bpmn.elements.Gateway;
 import org.eclipse.collections.impl.set.mutable.primitive.IntHashSet;
-import org.processmining.models.graphbased.directed.bpmn.BPMNDiagram;
-import org.processmining.models.graphbased.directed.bpmn.BPMNDiagramImpl;
-import org.processmining.models.graphbased.directed.bpmn.BPMNEdge;
-import org.processmining.models.graphbased.directed.bpmn.BPMNNode;
-import org.processmining.models.graphbased.directed.bpmn.elements.Flow;
-import org.processmining.models.graphbased.directed.bpmn.elements.Gateway;
 
 import java.util.*;
 

@@ -21,11 +21,11 @@
 package org.apromore.service.bpmndiagramimporter.impl;
 
 import org.apromore.service.bpmndiagramimporter.BPMNDiagramImporter;
-import org.processmining.models.graphbased.directed.ContainableDirectedGraphElement;
-import org.processmining.models.graphbased.directed.DirectedGraphEdge;
-import org.processmining.models.graphbased.directed.DirectedGraphNode;
-import org.processmining.models.graphbased.directed.bpmn.*;
-import org.processmining.models.graphbased.directed.bpmn.elements.*;
+import org.apromore.processmining.models.graphbased.directed.ContainableDirectedGraphElement;
+import org.apromore.processmining.models.graphbased.directed.DirectedGraphEdge;
+import org.apromore.processmining.models.graphbased.directed.DirectedGraphNode;
+import org.apromore.processmining.models.graphbased.directed.bpmn.*;
+import org.apromore.processmining.models.graphbased.directed.bpmn.elements.*;
 
 import com.processconfiguration.*;
 import org.omg.spec.bpmn._20100524.model.*;
@@ -37,8 +37,8 @@ import java.io.File;
 import java.io.StringReader;
 import java.util.*;
 
-import org.processmining.models.graphbased.directed.bpmn.elements.SubProcess;
-import org.processmining.plugins.bpmn.BpmnAssociation;
+import org.apromore.processmining.models.graphbased.directed.bpmn.elements.SubProcess;
+import org.apromore.processmining.plugins.bpmn.BpmnAssociation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;

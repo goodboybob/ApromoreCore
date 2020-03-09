@@ -33,14 +33,12 @@ import java.util.StringTokenizer;
 import javax.swing.UIManager;
 
 import org.apache.commons.lang3.StringUtils;
-import org.processmining.contexts.uitopia.UIContext;
-import org.processmining.contexts.uitopia.UIPluginContext;
-import org.processmining.models.graphbased.directed.bpmn.BPMNDiagram;
-import org.processmining.models.graphbased.directed.bpmn.BPMNDiagramImpl;
-import org.processmining.models.graphbased.directed.bpmn.BPMNNode;
-import org.processmining.models.graphbased.directed.bpmn.elements.Activity;
-import org.processmining.models.graphbased.directed.bpmn.elements.Event;
-import org.processmining.plugins.bpmn.plugins.BpmnExportPlugin;
+import org.apromore.processmining.models.graphbased.directed.bpmn.BPMNDiagram;
+import org.apromore.processmining.models.graphbased.directed.bpmn.BPMNDiagramImpl;
+import org.apromore.processmining.models.graphbased.directed.bpmn.BPMNNode;
+import org.apromore.processmining.models.graphbased.directed.bpmn.elements.Activity;
+import org.apromore.processmining.models.graphbased.directed.bpmn.elements.Event;
+import org.apromore.processmining.plugins.bpmn.plugins.BpmnExportPlugin;
 
 import au.edu.qut.processmining.log.SimpleLog;
 import au.edu.qut.processmining.miners.splitminer.ui.dfgp.DFGPUIResult;
@@ -943,11 +941,8 @@ public class DirectlyFollowGraphPlus {
     // Bruce: for debug only
     private void writeDiagram(BPMNDiagram d, String filename) {
         try {
-            UIContext context = new UIContext();
-            UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
-            UIPluginContext uiPluginContext = context.getMainPluginContext();
             BpmnExportPlugin exportPlugin = new BpmnExportPlugin();
-            exportPlugin.export(uiPluginContext, d, new File(filename));
+            exportPlugin.export(d, new File(filename));
         }
         catch (Exception ex) {
             ex.printStackTrace();

@@ -42,20 +42,10 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
-                        <Bundle-ClassPath>.,{maven-dependencies}</Bundle-ClassPath>
-                        <Bundle-Name>BPMNTK OSGI</Bundle-Name>
-                        <Import-Bundle>
-                            org.apromore.prom6-osgi;bundle-version="[1.0,2.0)"
-                        </Import-Bundle>
                         <Import-Package>
-                            !junit.framework.*,
-                            !org.junit.*,
-                            !org.omg.spec.bpmn._20100524.model.*,
                             ee.ut.comptech.*; version="[1.0,2.0)",
-                            org.processmining.contexts.*;version="[1.0,2.0)",
-                            org.processmining.framework.*;version="[1.0,2.0)",
-                            org.processmining.models.*;version="[1.0,2.0)",
-                            org.processmining.plugins.*;version="[1.0,2.0)",
+                            org.apromore.processmining.models.*;version="[1.0,2.0)",
+                            org.apromore.processmining.plugins.*;version="[1.0,2.0)",
                             *
                         </Import-Package>
                         <Export-Package>
@@ -90,43 +80,14 @@
         
         <dependency>
             <groupId>org.apromore</groupId>
-            <artifactId>prom6-osgi</artifactId>
+            <artifactId>prom-bpmn-osgi</artifactId>
+            <version>1.0</version>
         </dependency>
-
+        
         <dependency>
             <groupId>de.hpi.jbpt</groupId>
             <artifactId>de-jbpt</artifactId>
             <version>0.2.77</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.processmining</groupId>
-            <artifactId>bpmn</artifactId>
-            <version>6.5.20170418</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.processmining</groupId>
-            <artifactId>prom6-contexts</artifactId>
-            <version>6.5.20170418</version>
-        </dependency>
-        
-        <dependency>
-            <groupId>org.processmining</groupId>
-            <artifactId>prom6-framework</artifactId>
-            <version>6.5.20170418</version>
-        </dependency>
-        
-        <dependency>
-            <groupId>org.processmining</groupId>
-            <artifactId>prom6-models</artifactId>
-            <version>6.5.20170418</version>
-        </dependency>
-        
-        <dependency>
-            <groupId>org.processmining</groupId>
-            <artifactId>prom6-plugins</artifactId>
-            <version>6.5.20170418</version>
         </dependency>
         
     </dependencies>

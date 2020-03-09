@@ -20,9 +20,9 @@
 
 package au.edu.qut.processmining.miners.splitminer.oracle;
 
-import org.processmining.models.graphbased.directed.bpmn.elements.Gateway;
-
 import java.util.*;
+
+import org.apromore.processmining.models.graphbased.directed.bpmn.elements.Gateway;
 
 /**
  * Created by Adriano on 1/11/2016.

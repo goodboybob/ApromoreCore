@@ -20,7 +20,7 @@
 
 package au.edu.qut.bpmn.exporter;
 
-import org.processmining.models.graphbased.directed.bpmn.BPMNDiagram;
+import org.apromore.processmining.models.graphbased.directed.bpmn.BPMNDiagram;
 
 /**
  * Created by Adriano on 29/10/2015.

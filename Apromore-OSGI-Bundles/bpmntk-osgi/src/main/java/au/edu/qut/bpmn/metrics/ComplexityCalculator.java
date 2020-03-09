@@ -28,28 +28,16 @@ import de.hpi.bpt.graph.algo.rpst.RPSTNode;
 import de.hpi.bpt.graph.algo.tctree.TCType;
 import de.hpi.bpt.hypergraph.abs.IVertex;
 import de.hpi.bpt.hypergraph.abs.Vertex;
-import org.processmining.contexts.uitopia.annotations.UITopiaVariant;
-import org.processmining.framework.plugin.PluginContext;
-import org.processmining.framework.plugin.annotations.Plugin;
-import org.processmining.framework.plugin.annotations.PluginVariant;
-import org.processmining.models.graphbased.directed.bpmn.BPMNDiagram;
-import org.processmining.models.graphbased.directed.bpmn.BPMNNode;
-import org.processmining.models.graphbased.directed.bpmn.elements.*;
+
+import org.apromore.processmining.models.graphbased.directed.bpmn.BPMNDiagram;
+import org.apromore.processmining.models.graphbased.directed.bpmn.BPMNNode;
+import org.apromore.processmining.models.graphbased.directed.bpmn.elements.*;
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Map;
 
-
-@Plugin(
-        name = "Compute Complexity",
-        parameterLabels = { "BPMNDiagram" },
-        returnLabels = { "Complexity" },
-        returnTypes = { String.class },
-        userAccessible = true,
-        help = "Compute complexity of a BPMN process model."
-)
 public class ComplexityCalculator {
     private String bonds;
     private String rigids;
@@ -93,13 +81,7 @@ public class ComplexityCalculator {
         return result;
     }
 
-    @UITopiaVariant(
-            affiliation = "Queensland University of Technology",
-            author = "Adriano Augusto",
-            email = "a.augusto@qut.edu.au"
-    )
-    @PluginVariant(variantLabel = "Compute Complexity", requiredParameterLabels = {0})
-    public static String computeComplexity(PluginContext context, BPMNDiagram diagram) {
+    public static String computeComplexity(BPMNDiagram diagram) {
         String measures = "";
 
         ComplexityCalculator cc = new ComplexityCalculator(diagram);

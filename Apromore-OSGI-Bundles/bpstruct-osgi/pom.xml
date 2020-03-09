@@ -81,6 +81,11 @@
                             *;resolution=optional
                         </Import-Package>
                         <Export-Package>
+                            ee.ut.bpstruct,
+							ee.ut.comptech
+                        </Export-Package>
+                        <!--                        
+                        <Export-Package>
                             de.hpi.bpt.graph,
                             de.hpi.bpt.graph.*,
                             de.hpi.bpt.graph.abs,
@@ -95,6 +100,7 @@
                             ee.ut.bpstruct,
 							ee.ut.comptech
                         </Export-Package>
+                        -->
                     </instructions>
                 </configuration>
             </plugin>
