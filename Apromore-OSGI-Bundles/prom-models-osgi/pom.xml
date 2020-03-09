@@ -30,7 +30,7 @@
 
     <groupId>org.apromore</groupId>
     <artifactId>prom-models-osgi</artifactId>
-    <version>6.5</version>
+    <version>1.0</version>
     <packaging>bundle</packaging>
 
     <build>
