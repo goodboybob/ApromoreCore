@@ -62,17 +62,22 @@
     </fileset>
     
     <fileset id="fileset-core-osgi-lib" dir="${core-dir-osgi}">
-        <include name="**/target/bpmntk-osgi-2.1.jar"/>            
-        <include name="**/target/bpstruct-osgi-1.2.jar"/>   
-        <include name="**/target/eclipse-collections-osgi-1.1.jar"/>
-        <include name="**/target/ehcache-virgo-3.8.1.jar"/>
+        <include name="hpi-bpt-osgi/target/hpi-bpt-osgi-1.0.jar"/>
+        <include name="bpmntk-osgi/target/bpmntk-osgi-2.1.jar"/>            
+        <include name="bpstruct-osgi/target/bpstruct-osgi-1.2.jar"/>   
+        <include name="eclipse-collections-osgi/target/eclipse-collections-osgi-1.1.jar"/>
+        <include name="json-osgi//target/json-osgi-1.0.jar"/>
+        <include name="log-osgi/target/log-osgi-1.1.jar"/>
+        <include name="lpsolve-osgi/target/lpsolve-osgi-1.1.jar"/>
+        <include name="similaritysearch-osgi/target/similaritysearch-osgi-1.1.jar"/>
+        <include name="jgraph-osgi/target/jgraph-osgi-1.0.jar"/>
+        <include name="prom-models-osgi/target/prom-models-osgi-1.0.jar"/>
+        <include name="prom-widgets-osgi/target/prom-widgets-osgi-1.0.jar"/>
+        <include name="prom-bpmn-osgi/target/prom-bpmn-osgi-1.0.jar"/>
+        <!--<include name="${core-dir}/Apromore-OSGI-Bundles/ehcache-virgo/target/ehcache-virgo-3.8.1.jar"/>-->
         <!--<include name="**/target/ini4j-osgi-0.5.2.jar"/>-->
-        <!--<include name="**/target/jdom2-osgi-2.0.6.jar"/>  -->
-        <include name="**/target/json-osgi-1.0.jar"/>
-        <include name="**/target/log-osgi-1.1.jar"/>
-        <include name="**/target/lpsolve-osgi-1.1.jar"/>
-        <include name="**/target/prom6-osgi-1.0.jar"/>
-        <include name="**/target/similaritysearch-osgi-1.1.jar"/>
+        <!--<include name="**/target/jdom2-osgi-2.0.6.jar"/>  -->        
+        <!--<include name="**/target/prom6-osgi-1.0.jar"/>-->
         <!--<include name="**/target/zk-osgi-8.6.0.1.jar"/>-->
     </fileset>
     

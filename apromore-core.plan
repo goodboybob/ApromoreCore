@@ -8,16 +8,21 @@
     
     <!-- OSGi Libraries -->
     <artifact type="bundle" name="org.apromore.eclipse-collections-osgi" version="[1.0.0, 2)"/>
-    <artifact type="bundle" name="org.apromore.prom6-osgi" version="[1.0.0, 2)"/>
+    <artifact type="bundle" name="org.apromore.hpi-bpt-osgi" version="[1.0.0, 2)"/>
     <artifact type="bundle" name="org.apromore.bpmntk-osgi" version="[2.0.0, 3)"/>
     <artifact type="bundle" name="org.apromore.bpstruct-osgi" version="[1.0.0, 2)"/>
-    <!--<artifact type="bundle" name="org.ini4j.osgi" version="[0.5.0, 2)"/>-->
-    <!--<artifact type="bundle" name="org.apromore.jdom2-osgi" version="[2.0.0, 3)"/>-->
     <artifact type="bundle" name="org.json.osgi" version="[1.0.0, 2)"/> 
     <artifact type="bundle" name="org.apromore.log-osgi" version="[1.0.0, 2)"/>
     <artifact type="bundle" name="org.apromore.lpsolve-osgi" version="[1.0.0, 2)"/>
     <artifact type="bundle" name="org.apromore.similaritysearch-osgi" version="[1.0.0, 2)"/>
+    <artifact type="bundle" name="org.apromore.jgraph-osgi" version="[1.0.0, 2)"/>
+    <artifact type="bundle" name="org.apromore.prom-models-osgi" version="[1.0.0, 2)"/>
+    <artifact type="bundle" name="org.apromore.prom-widgets-osgi" version="[1.0.0, 2)"/>
+    <artifact type="bundle" name="org.apromore.prom-bpmn-osgi" version="[1.0.0, 2)"/>
+    <!--<artifact type="bundle" name="org.apromore.prom6-osgi" version="[1.0.0, 2)"/>-->
     <!--<artifact type="bundle" name="org.apromore.zk-osgi" version="[8.0.0, 10)"/>-->
+    <!--<artifact type="bundle" name="org.ini4j.osgi" version="[0.5.0, 2)"/>-->
+    <!--<artifact type="bundle" name="org.apromore.jdom2-osgi" version="[2.0.0, 3)"/>-->
     
 
     <!-- Database -->
