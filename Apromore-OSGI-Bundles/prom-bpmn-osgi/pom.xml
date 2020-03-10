@@ -50,23 +50,23 @@
                             *
                         </Import-Package>
                         <Export-Package>
-                            org.processmining.models.graphbased.directed.bpmn,
-                            org.processmining.models.graphbased.directed.bpmn.elements,
-                            org.processmining.plugins.bpmn,
-                            org.processmining.plugins.bpmn.diagram,
-                            org.processmining.plugins.bpmn.parameters,
-                            org.processmining.plugins.xpdl,
-                            org.processmining.plugins.xpdl.collections,
-                            org.processmining.plugins.xpdl.converter,
-                            org.processmining.plugins.xpdl.datatypes,
-                            org.processmining.plugins.xpdl.deprecated,
-                            org.processmining.plugins.xpdl.export,
-                            org.processmining.plugins.xpdl.expressiontype,
-                            org.processmining.plugins.xpdl.graphics,
-                            org.processmining.plugins.xpdl.graphics.collections,
-                            org.processmining.plugins.xpdl.idname,
-                            org.processmining.plugins.xpdl.importing,
-                            org.processmining.plugins.xpdl.text
+                            org.apromore.processmining.models.graphbased.directed.bpmn,
+                            org.apromore.processmining.models.graphbased.directed.bpmn.elements,
+                            org.apromore.processmining.plugins.bpmn,
+                            org.apromore.processmining.plugins.bpmn.diagram,
+                            org.apromore.processmining.plugins.bpmn.parameters,
+                            org.apromore.processmining.plugins.xpdl,
+                            org.apromore.processmining.plugins.xpdl.collections,
+                            org.apromore.processmining.plugins.xpdl.converter,
+                            org.apromore.processmining.plugins.xpdl.datatypes,
+                            org.apromore.processmining.plugins.xpdl.deprecated,
+                            org.apromore.processmining.plugins.xpdl.export,
+                            org.apromore.processmining.plugins.xpdl.expressiontype,
+                            org.apromore.processmining.plugins.xpdl.graphics,
+                            org.apromore.processmining.plugins.xpdl.graphics.collections,
+                            org.apromore.processmining.plugins.xpdl.idname,
+                            org.apromore.processmining.plugins.xpdl.importing,
+                            org.apromore.processmining.plugins.xpdl.text
                         </Export-Package>
                     </instructions>
                 </configuration>

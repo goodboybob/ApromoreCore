@@ -45,12 +45,12 @@
                             *
                         </Import-Package>
                         <Export-Package>
-                            org.processmining.models.jgraph,
-                            org.processmining.models.jgraph.elements,
-                            org.processmining.models.jgraph.factory,
-                            org.processmining.models.jgraph.listeners,
-                            org.processmining.models.jgraph.renderers,
-                            org.processmining.models.jgraph.views
+                            org.apromore.processmining.models.jgraph,
+                            org.apromore.processmining.models.jgraph.elements,
+                            org.apromore.processmining.models.jgraph.factory,
+                            org.apromore.processmining.models.jgraph.listeners,
+                            org.apromore.processmining.models.jgraph.renderers,
+                            org.apromore.processmining.models.jgraph.views
                         </Export-Package>
                     </instructions>
                 </configuration>

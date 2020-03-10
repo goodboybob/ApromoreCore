@@ -45,17 +45,17 @@
                             *
                         </Import-Package>
                         <Export-Package>
-                            org.processmining.models.cast,
-                            org.processmining.models.connections,
-                            org.processmining.models.events,
-                            org.processmining.models.graphbased,
-                            org.processmining.models.graphbased.directed,
-                            org.processmining.models.graphbased.directed.analysis,
-                            org.processmining.models.graphbased.directed.utils,
-                            org.processmining.models.graphbased.directedhypergraph,
-                            org.processmining.models.graphbased.undirected,
-                            org.processmining.models.semantics,
-                            org.processmining.models.shapes
+                            org.apromore.processmining.models.cast,
+                            org.apromore.processmining.models.connections,
+                            org.apromore.processmining.models.events,
+                            org.apromore.processmining.models.graphbased,
+                            org.apromore.processmining.models.graphbased.directed,
+                            org.apromore.processmining.models.graphbased.directed.analysis,
+                            org.apromore.processmining.models.graphbased.directed.utils,
+                            org.apromore.processmining.models.graphbased.directedhypergraph,
+                            org.apromore.processmining.models.graphbased.undirected,
+                            org.apromore.processmining.models.semantics,
+                            org.apromore.processmining.models.shapes
                         </Export-Package>
                     </instructions>
                 </configuration>
