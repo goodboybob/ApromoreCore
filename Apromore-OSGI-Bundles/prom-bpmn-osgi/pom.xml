@@ -55,17 +55,16 @@
                             org.apromore.processmining.plugins.bpmn,
                             org.apromore.processmining.plugins.bpmn.diagram,
                             org.apromore.processmining.plugins.bpmn.parameters,
+                            org.apromore.processmining.plugins.bpmn.plugins,
                             org.apromore.processmining.plugins.xpdl,
                             org.apromore.processmining.plugins.xpdl.collections,
                             org.apromore.processmining.plugins.xpdl.converter,
                             org.apromore.processmining.plugins.xpdl.datatypes,
                             org.apromore.processmining.plugins.xpdl.deprecated,
-                            org.apromore.processmining.plugins.xpdl.export,
                             org.apromore.processmining.plugins.xpdl.expressiontype,
                             org.apromore.processmining.plugins.xpdl.graphics,
                             org.apromore.processmining.plugins.xpdl.graphics.collections,
                             org.apromore.processmining.plugins.xpdl.idname,
-                            org.apromore.processmining.plugins.xpdl.importing,
                             org.apromore.processmining.plugins.xpdl.text
                         </Export-Package>
                     </instructions>
