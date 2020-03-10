@@ -53,6 +53,7 @@
                             org.springframework.beans.factory.aspectj,
                             org.apromore.processmining.models.*,
                             org.apromore.processmining.plugins.*,
+                            org.osgi.framework;version="[1.0,2.0)",
                             *
                         </Import-Package>
                         <Export-Package>
@@ -87,6 +88,19 @@
             <groupId>org.springframework</groupId>
             <artifactId>org.springframework.context</artifactId>
         </dependency>
+        <!-- 
+		<dependency>
+		    <groupId>org.springframework.osgi</groupId>
+		    <artifactId>spring-osgi-core</artifactId>
+		    <version>1.2.1</version>
+		</dependency>
+		-->    
+		<dependency>
+		    <groupId>org.osgi</groupId>
+		    <artifactId>org.osgi.framework</artifactId>
+		    <version>1.9.0</version>
+		    <scope>provided</scope>
+		</dependency>		    
     </dependencies>
 </project>
 
