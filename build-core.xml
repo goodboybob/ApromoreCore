@@ -21,15 +21,9 @@
 
 <project name="Apromore - Eclipse Virgo Deployment" default="deploy-virgo">
 
-    <description>
-        Supports deployment of Apromore to Eclipse Virgo.
-    </description>
-
-    <!-- This file isn't intended to be directly invoked; it's expected to be imported by other projects.
-         The importing project must set the ${dir} property to be the directory of the ApromoreCore checkout. -->
+    <description>Apromore Core Distribution</description>
 
     <!-- Folders used to build and deploy dependencies for Apromore. -->
-    <!-- <property name="dir" location="${basedir}"/> -->
     <property name="core-dir" location="${basedir}/ApromoreCore"/>
     <property name="core-dir-sups" location="${core-dir}/Supplements"/>
     <property name="core-dir-extras" location="${core-dir}/Apromore-Extras"/>
@@ -38,8 +32,8 @@
 
     <!--  URL of the automatically downloaded and installed Eclipse Virgo -->
     <property name="virgo-url" value="https://github.com/apromore/ApromoreDev/blob/master/software/virgo-tomcat-server-3.6.4.RELEASE.zip?raw=true"/>
-    <property name="core-dir-deployment" location="${core-dir}/Apromore-Assembly"/>
-    <property name="core-dir-virgo" location="${core-dir-deployment}/virgo-tomcat-server-3.6.4.RELEASE"/>
+    <property name="core-dir-assembly" location="${core-dir}/Apromore-Assembly"/>
+    <property name="core-dir-virgo" location="${core-dir-assembly}/virgo-tomcat-server-3.6.4.RELEASE"/>
 
     <!-- Locations of all the plugins. as they should be separate to the Web App PAR. -->
     <property name="core-dir-plugins" location="${core-dir}/Apromore-Plugins/"/>
@@ -144,7 +138,7 @@
         <include name="site.properties"/>
     </fileset>
     
-    <target name="copy-core" depends="">
+    <target name="copy-core" depends="clean-virgo, setup-virgo, create-repository-dirs">
         <copy todir="${core-dir-virgo}" flatten="true" overwrite="true">
             <fileset refid="fileset-core-lpsolve-lib" />
         </copy>
@@ -180,10 +174,10 @@
     </target>
 
     <target name="download-virgo" depends="check-virgo" unless="virgo.installed">
-        <mkdir dir="${core-dir-deployment}"/>
-        <get src="${virgo-url}" dest="${core-dir-deployment}/virgo.zip"/>
-        <unzip src="${core-dir-deployment}/virgo.zip" dest="${core-dir-deployment}"/>
-        <delete file="${core-dir-deployment}/virgo.zip"/>
+        <mkdir dir="${core-dir-assembly}"/>
+        <get src="${virgo-url}" dest="${core-dir-assembly}/virgo.zip"/>
+        <unzip src="${core-dir-assembly}/virgo.zip" dest="${core-dir-assembly}"/>
+        <delete file="${core-dir-assembly}/virgo.zip"/>
     </target>
 
     <target name="configure-virgo">
@@ -238,11 +232,11 @@
         </delete>
     </target>
 
-    <target name="create-repository-dirs">
-        <mkdir dir="${core-dir-deployment}/Editor-Repository"/>
-        <mkdir dir="${core-dir-deployment}/Filestore-Repository"/>
-        <mkdir dir="${core-dir-deployment}/Lucene-Repository"/>
-        <mkdir dir="${core-dir-deployment}/Filestore-Repository"/>
+    <target name="create-repository-dirs" depends="clean-virgo, setup-virgo">
+        <mkdir dir="${core-dir-assembly}/Editor-Repository"/>
+        <mkdir dir="${core-dir-assembly}/Filestore-Repository"/>
+        <mkdir dir="${core-dir-assembly}/Lucene-Repository"/>
+        <mkdir dir="${core-dir-assembly}/Filestore-Repository"/>
     </target>
 
     <target name="stop-virgo" depends="setup-virgo">
@@ -256,14 +250,14 @@
 
     <target name="create-h2">
         <delete>
-            <fileset dir="${core-dir-deployment}" includes="Manager-Repository.*"/>
+            <fileset dir="${core-dir-assembly}" includes="Manager-Repository.*"/>
         </delete>
         <java classname="org.h2.tools.RunScript">
             <classpath>
                 <pathelement location="${core-dir}/Apromore-Assembly/Portal-Assembly/target/repository/usr/h2-1.3.171.jar"/>
             </classpath>
             <arg value="-url"/>
-            <arg value="jdbc:h2:${core-dir-deployment}/Manager-Repository"/>
+            <arg value="jdbc:h2:${core-dir-assembly}/Manager-Repository"/>
             <arg value="-script"/>
             <arg file="${core-dir}/Apromore-Core-Components/Apromore-Manager/src/test/resources/database/db-h2.sql"/>
         </java>
@@ -272,7 +266,7 @@
                 <pathelement location="${core-dir}/Apromore-Assembly/Portal-Assembly/target/repository/usr/h2-1.3.171.jar"/>
             </classpath>
             <arg value="-url"/>
-            <arg value="jdbc:h2:${core-dir-deployment}/Manager-Repository"/>
+            <arg value="jdbc:h2:${core-dir-assembly}/Manager-Repository"/>
             <arg value="-script"/>
             <arg file="${core-dir}/Apromore-Core-Components/Apromore-Manager/src/test/resources/database/db-data.sql"/>
         </java>
