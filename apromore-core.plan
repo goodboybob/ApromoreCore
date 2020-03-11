@@ -62,6 +62,12 @@
     
     <!-- CORE CUSTOM PLUGINS -->
     
+    <artifact type="bundle" name="org.apromore.similaritysearch-logic" version="[1.1.0, 2)"/>
+	<artifact type="bundle" name="org.apromore.similaritysearch-portal" version="[1.1.0, 2)"/>
+    
+    <artifact type="bundle" name="org.apromore.merge-logic" version="[1.1.0, 2)"/>
+	<artifact type="bundle" name="org.apromore.plugin.merge-portal" version="[1.1.0, 2)"/>      
+    
     <artifact type="bundle" name="org.apromore.plugin.generic-portal-plugin" version="[1.0.0, 2)"/>
     
     <artifact type="bundle" name="org.apromore.plugin.log-management-logic" version="[1.0.0, 2)"/>
