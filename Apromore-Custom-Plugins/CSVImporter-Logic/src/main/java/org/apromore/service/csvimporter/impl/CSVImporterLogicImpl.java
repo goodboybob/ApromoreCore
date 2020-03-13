@@ -1,7 +1,7 @@
 /*
- * Copyright © 2009-2019 The Apromore Initiative.
- *
  * This file is part of "Apromore".
+ *
+ * Copyright (C) 2019 - 2020 The University of Melbourne.
  *
  * "Apromore" is free software; you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as
@@ -98,10 +98,11 @@ public class CSVImporterLogicImpl implements CSVImporterLogic, Constants {
                     // if line is empty, move to next iteration, until 50 lines are empty
                     finishCount++;
                     continue;
+                } else {
+                    lineCount++;
                 }
 
                 if (line != null && line.length > 2) {
-                    lineCount++;
                     try {
                         otherTimestamps = new HashMap<>();
                         others = new HashMap<>();
