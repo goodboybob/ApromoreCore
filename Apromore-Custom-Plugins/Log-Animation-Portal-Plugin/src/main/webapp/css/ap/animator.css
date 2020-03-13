@@ -179,7 +179,7 @@ body > .x-panel-editor-east {
     display: none;
 }
 
-.ap-animator-controls #speed_controls {
+.ap-animator-controls #speed-control-wrapper {
     width: 100%;
     margin: 12px 0 33px 0;
     padding: 0;
@@ -390,7 +390,7 @@ body > .x-panel-editor-east {
     font-size: 14px;
 }
 
-#speed_controls .speed-control-tip {
+#speed-control-wrapper .speed-control-tip {
     position: absolute;
     left: 50%;
     top: 15px;
@@ -403,6 +403,6 @@ body > .x-panel-editor-east {
     font-size: 12px;
 }
 
-#speed_controls:hover .speed-control-tip {
+#speed-control-wrapper:hover .speed-control-tip {
     display: block;
 }
