@@ -1,58 +1,81 @@
 /*
+ * This file is part of "Apromore".
+ *
+ * Copyright (C) 2017 Queensland University of Technology.
+ * Copyright (C) 2019 - 2020 The University of Melbourne.
+ *
+ * "Apromore" is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * "Apromore" is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty
+ * of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this program.
+ * If not, see <http://www.gnu.org/licenses/lgpl-3.0.html>.
+ */
+/**
  * Browser compatibility notes
  *
  * Chrome:
  * - Does not support reference variable to point DOM elements, must use selectors (getElementsBy)
  *   otherwise the innerHTML and element attributes are not updated
  * - svg.setCurrentTime is not processed properly, must call svg to reload via innerHTML
+ *
+ * Dependencies:
+ * utils.js (for Clazz)
+ *
+ * The animation page has four animation components:
+ *
+ * 1. The process model with tokens moving along the nodes and edges
+ * 2. The timeline bar with a tick moving along
+ * 3. The circular progress bar showing the completion percentage for the log
+ * 4. The digital clock running and showing the passing time
+ *
+ * These four components belong to four separate SVG document (<svg> tags).
+ * Each SVG document has an internal SVG engine time
+ *
+ * The process model has nodes and edges which are SVG shapes. The animation shows tokens moving along these shapes.
+ * Each token (or marker) belongs to a case in the log. A case is kept track in a LogCase object.
+ * Each LogCase has multiple markers created and animated along certain nodes and edges
+ * on the model in a continuous manner. Each marker is an SVG animateMotion element with a path attribute pointing
+ * to the node or edge it has to move along. Two key attributes for animations are begin and dur (duration),
+ * respectively when it begins and for how long. These attribute values are based on the time of the containing SVG document.
+ *
+ * The timeline bar has a number of equal slots configured in the configuration file, e.g. TimelineSlots = 120.
+ * Each slot represents a duration of time in the event log, called SlotDataUnit, i.e. how many seconds per slot
+ * Each slot also represents a duration of time in the animation engine, called SlotEngineUnit
+ * For example, if the log spans a long period of time, SlotDataUnit will have a large value.
+ * SlotEngineUnit is used to calculate the speed of the tick movement on the timeline bar
+ * SlotDataUnit is used to calculate the location of a specific event date on the timeline bar
+ * timeCoefficient: the ratio of SlotDataUnit to SlotEngineUnit, i.e. 1 second in the engine = how many seconds in the data.
+ * The starting point of time in all logs is set in json data sent from the server: startDateMillis.
+ *
+ * The digital clock must keep running to show the clock jumping. It is governed by a timer property of
+ * the controller. This timer is set to execute a function every interval of 100ms.
+ * Starting from 0, it counts 100, 200, 300,...ms.
+ * Call getCurrentTime() to the SVG document returns the current clock intervals = 100x (x = count)
+ * The actual current time is: getCurrentTime()*timeCoefficient + startDateMillis.
  */
 
-/*
-* The animation page has four animation components:
-*
-* 1. The process model with tokens moving along the nodes and edges
-* 2. The timeline bar with a tick moving along
-* 3. The circular progress bar showing the completion percentage for the log
-* 4. The digital clock running and showing the passing time
-*
-* These four components belong to four separate SVG document (<svg> tags).
-* Each SVG document has an internal SVG engine time
-*
-* The process model has nodes and edges which are SVG shapes. The animation shows tokens moving along these shapes.
-* Each token (or marker) belongs to a case in the log. A case is kept track in a LogCase object.
-* Each LogCase has multiple markers created and animated along certain nodes and edges
-* on the model in a continuous manner. Each marker is an SVG animateMotion element with a path attribute pointing
-* to the node or edge it has to move along. Two key attributes for animations are begin and dur (duration),
-* respectively when it begins and for how long. These attribute values are based on the time of the containing SVG document.
-*
-* The timeline bar has a number of equal slots configured in the configuration file, e.g. TimelineSlots = 120.
-* Each slot represents a duration of time in the event log, called SlotDataUnit, i.e. how many seconds per slot
-* Each slot also represents a duration of time in the animation engine, called SlotEngineUnit
-* For example, if the log spans a long period of time, SlotDataUnit will have a large value.
-* SlotEngineUnit is used to calculate the speed of the tick movement on the timeline bar
-* SlotDataUnit is used to calculate the location of a specific event date on the timeline bar
-* timeCoefficient: the ratio of SlotDataUnit to SlotEngineUnit, i.e. 1 second in the engine = how many seconds in the data.
-* The starting point of time in all logs is set in json data sent from the server: startDateMillis.
-*
-* The digital clock must keep running to show the clock jumping. It is governed by a timer property of
-* the controller. This timer is set to execute a function every interval of 100ms.
-* Starting from 0, it counts 100, 200, 300,...ms.
-* Call getCurrentTime() to the SVG document returns the current clock intervals = 100x (x = count)
-* The actual current time is: getCurrentTime()*timeCoefficient + startDateMillis.
-*
-
-/* Animation controller
+/**
+ * Animation controller
+ *
+ * ID of the timer used by the digital clock on the replay control panel
+ * The timer is set whenever the replay is started or restarted, and cleared whenevenr it is paused.
+ * The synchronization between the digital clock and internal timer of SVG documents is done vie this timer
+ * because the timer will read the internal time of every SVG documents at every internal instant
  *
  */
+'use strict'
 
 let AnimationController = {
-  // ID of the timer used by the digital clock on the replay control panel
-  // The timer is set whenever the replay is started or restarted, and cleared whenevenr it is paused.
-  // The synchronization between the digital clock and internal timer of SVG documents is done vie this timer
-  // because the timer will read the internal time of every SVG documents at every internal instant
 
   construct: function (canvas) {
-    'use strict'
 
     this.jsonModel = null // Parsed objects of the process model
     this.jsonServer = null // Parsed objects returned from the server
