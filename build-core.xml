@@ -77,9 +77,7 @@
     
     <fileset id="fileset-core-custom-plugins" dir="${core-dir}">
         <include name="Apromore-Assembly/*-Assembly/target/repository/usr/*"/>
-        <include name="Apromore-Assembly/Custom-Plugins/target/repository/usr/*"/>
         
-        <!-- These plugins wll be installed in an order with Apromore-Assembly/Custom-Plugins/custom-plugins.plan -->
         <include name="Apromore-Custom-Plugins/Generic-Portal-Plugin/target/generic-portal-plugin-1.0.0.jar"/>
         <include name="Apromore-Custom-Plugins/Log-Filter-Logic/target/log-filter-logic-1.0.0.jar"/>
         <include name="Apromore-Custom-Plugins/Log-Management-Logic/target/log-management-logic-1.0.0.jar"/>
@@ -97,16 +95,8 @@
         <include name="Apromore-Custom-Plugins/CSVExporter-Logic/target/csvexporter-logic-1.0.jar"/>
         <include name="Apromore-Custom-Plugins/CSVExporter-Portal/target/csvexporter-portal-plugin-1.0.jar"/>        
 
-        <include name="Apromore-Custom-Plugins/Predictive-Monitor-Logic/target/predictive-monitor-logic-1.0.jar"/>
-        <include name="Apromore-Custom-Plugins/Predictive-Monitor-Portal-Plugin/target/predictive-monitor-portal-plugin-1.0.war"/>
-        <include name="Apromore-Custom-Plugins/Predictor-Training-Portal-Plugin/target/predictor-training-portal-plugin-1.0.war"/>
-
         <include name="Apromore-Custom-Plugins/Log-Animation-Logic/target/log-animation-logic-1.0.jar"/>
         <include name="Apromore-Custom-Plugins/Log-Animation-Portal-Plugin/target/log-animation-portal-plugin-1.0.war"/>
-
-        <!-- XES implementation selector -->
-        <include name="Apromore-Custom-Plugins/XES-Selection-Portal-Plugin/target/xes-selection-portal-plugin-1.0.jar"/>
-        <include name="Apromore-Custom-Plugins/Theme-Selection-Portal-Plugin/target/theme-selection-portal-plugin-1.0.jar"/>
     </fileset>
     
     <fileset id="fileset-core-old-plugin-annotation" dir="${core-dir-annotation}" >
@@ -145,11 +135,11 @@
         
         <copy todir="${core-dir-virgo}/repository/usr" flatten="true" overwrite="true">
             <fileset refid="fileset-core-osgi-lib" />
-            <fileset refid="fileset-core-custom-plugins" />
             <fileset refid="fileset-core-old-plugin-annotation" />
             <fileset refid="fileset-core-old-plugin-canoniser" />
             <fileset refid="fileset-core-old-plugin-logic" />
             <fileset refid="fileset-core-old-plugin-portal" />
+            <fileset refid="fileset-core-custom-plugins" />
             
             <!-- This bundle is a dependency for the eventstr-confchecking-code-osgi bundle, which is in turn used by Compare-Logic -->
             <fileset dir="${core-dir-sups}">

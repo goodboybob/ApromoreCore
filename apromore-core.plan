@@ -76,10 +76,6 @@
     
     <!--<artifact type="bundle" name="org.apromore.user-admin-portal-plugin" version="[1.0.0, 2)"/> -->
     
-    <artifact type="bundle" name="org.apromore.plugin.theme-selection-portal-plugin" version="[1.0.0, 2)"/>
-    
-    <artifact type="bundle" name="org.apromore.xes-selection-portal-plugin" version="[1.0.0, 2)"/>
-    
     <artifact type="bundle" name="org.apromore.csvimporter-logic" version="[1.0.0, 2)"/>
     <artifact type="bundle" name="org.apromore.csvimporter-portal" version="[1.0.0, 2)"/>
     
@@ -93,9 +89,5 @@
     
     <artifact type="bundle" name="org.apromore.log-animation-logic" version="[1.0.0,1.0.0]"/>
 	<artifact type="bundle" name="org.apromore.plugin.log-animation-portal-plugin" version="[1.0.0,1.0.0]"/>
-    
-    <artifact type="bundle" name="org.apromore.predictive-monitor-logic" version="[1.0.0, 2)"/>
-    <artifact type="bundle" name="org.apromore.plugin.predictive-monitor-portal-plugin" version="[1.0.0, 2)"/>
-    <artifact type="bundle" name="org.apromore.plugin.predictor-training-portal-plugin" version="[1.0.0, 2)"/>
 
 </plan>
